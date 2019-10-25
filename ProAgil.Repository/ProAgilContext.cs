@@ -9,15 +9,15 @@ namespace ProAgil.Repository
     public ProAgilContext(DbContextOptions<ProAgilContext> options) : base(options) { }
 
     public DbSet<Event> Events { get; set; }
-    public DbSet<Event> Speakers { get; set; }
-    public DbSet<Event> SpeakerEvents { get; set; }
-    public DbSet<Event> Lots { get; set; }
-    public DbSet<Event> SocialMedias { get; set; }
+    public DbSet<Speaker> Speakers { get; set; }
+    public DbSet<SpeakerEvent> SpeakerEvents { get; set; }
+    public DbSet<Lot> Lots { get; set; }
+    public DbSet<SocialMedia> SocialMedias { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
       modelBuilder.Entity<SpeakerEvent>()
-        .HasKey(PE => new { PE.EventId, PE.SpeakerId });
+        .HasKey(SE => new { SE.EventId, SE.SpeakerId });
     }
   }
 }
