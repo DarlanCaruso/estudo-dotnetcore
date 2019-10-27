@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProAgil.Domain
 {
+  [Table("Event")]
   public class Event
   {
     public int Id { get; set; }
@@ -12,7 +14,7 @@ namespace ProAgil.Domain
 
     public DateTime Date { get; set; }
 
-    public string ImageUrl { get; set; }
+    public string ImageURL { get; set; }
 
     public string Tel { get; set; }
 
@@ -20,9 +22,9 @@ namespace ProAgil.Domain
 
     public int PeopleCount { get; set; }
 
-    public List<Lot> Lot { get; set; }
+    public List<Lot> Lots { get; set; }
 
-    public List<SocialMedia> SocialMedia { get; set; }
+    public List<SocialMedia> SocialMedias { get; set; }
 
     public List<SpeakerEvent> SpeakerEvents { get; set; }
   }

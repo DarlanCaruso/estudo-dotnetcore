@@ -1,5 +1,8 @@
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace ProAgil.Domain
 {
+  [Table("SocialMedia")]
   public class SocialMedia
   {
     public int Id { get; set; }
@@ -10,10 +13,10 @@ namespace ProAgil.Domain
 
     public int? EventId { get; set; }
 
-    public Event Event { get; set; }
+    public Event Event { get; }
 
     public int? SpeakerId { get; set; }
 
-    public Speaker Speaker { get; set; }
+    public Speaker Speaker { get; }
   }
 }

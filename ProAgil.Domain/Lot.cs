@@ -1,7 +1,9 @@
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProAgil.Domain
 {
+  [Table("Lot")]
   public class Lot
   {
     public int Id { get; set; }
@@ -11,6 +13,6 @@ namespace ProAgil.Domain
     public DateTime? EndDate { get; set; }
     public int Count { get; set; }
     public int EventId { get; set; }
-    public Event Event { get; set; }
+    public Event Event { get; }
   }
 }

@@ -1,7 +1,9 @@
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProAgil.Domain
 {
+  [Table("Speaker")]
   public class Speaker
   {
     public int Id { get; set; }
