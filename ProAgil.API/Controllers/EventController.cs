@@ -70,7 +70,7 @@ namespace ProAgil.API.Controllers
           return Created($"/api/event/{model.Id}", model);
         }
       }
-      catch (Exception e)
+      catch (Exception)
       {
         return this.StatusCode(StatusCodes.Status500InternalServerError, "Erro interno do servidor");
       }
